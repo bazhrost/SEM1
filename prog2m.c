@@ -6,7 +6,6 @@ int main() {
     FILE *f;
     int n = 1;
     int x;
-    int i;
     int simm = 1;
     int *arr;
 
@@ -43,7 +42,7 @@ int main() {
     rewind(f);
 
     // Записываем элементы в массив
-    for (i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++) 
     {
         fscanf(f, "%d", &arr[i]);
     }
@@ -51,7 +50,7 @@ int main() {
     fclose(f);
 
     // Проверяем симметричность массива
-    for (i = 0; i < n / 2; i++) {
+    for (int i = 0; i < n / 2; i++) {
         if (arr[i] != arr[n - 1 - i]) {
             simm = 0;
             break;
